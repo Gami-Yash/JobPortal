@@ -1,0 +1,150 @@
+/* body {
+  text-align: center;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: rgba(24, 140, 148, 0.249);
+} */
+
+.signup-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 8px 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+#welcome-container {
+  background-image: radial-gradient(
+      circle at 29% 55%,
+      rgba(252, 252, 252, 0.1) 0%,
+      rgba(252, 252, 252, 0.1) 4%,
+      transparent 4%,
+      transparent 44%,
+      transparent 44%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 85% 89%,
+      rgba(252, 252, 252, 0.1) 0%,
+      rgba(252, 252, 252, 0.1) 51%,
+      transparent 51%,
+      transparent 52%,
+      transparent 52%,
+      transparent 100%
+    ),
+    linear-gradient(45deg, rgb(48, 203, 203), rgb(0, 181, 163));
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+#welcome-container h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  position: absolute;
+  height: 130px;
+}
+
+#welcome-container p {
+  font-size: 0.9em;
+}
+
+#signup-form-container {
+  padding: 30px 20px;
+}
+
+.form-title {
+  font-size: 1.8em;
+  color: rgb(0, 181, 163);
+  margin-bottom: 15px;
+}
+
+.input-field {
+  width: 85%;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.submit-button {
+  width: 85%;
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(0, 181, 163);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: rgb(0, 160, 143);
+}
+
+.login-link {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.login-link a {
+  color: rgba(0, 0, 0, 0.676);
+  text-decoration: none;
+}
+
+.recruiter {
+  margin-right: 35px;
+}
+
+.role {
+  margin: 8px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .signup-container {
+    flex-direction: row;
+    max-width: 800px;
+  }
+
+  #signup-form-container {
+    width: 60%;
+    padding: 40px 30px;
+  }
+
+  #welcome-container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .welcome-content {
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .signup-container {
+    max-width: 1000px;
+  }
+
+  #signup-form-container {
+    padding: 50px 40px;
+  }
+}

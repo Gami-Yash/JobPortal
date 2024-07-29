@@ -1,6 +1,24 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
+
 
 const Navbar = () => {
+
+
+  const navigate = useNavigate();
+  const handelLogout = async () =>{
+    const response = await fetch('http://localhost:8080/logout', {
+      method: 'POST',
+      credentials: 'include',
+    });
+    if(response.ok){
+      navigate('/login');
+    }
+
+  }
+
+
+
   return (
     <nav className="bg-teal-500 p-2 mt-0 w-full">
       <div className="container mx-auto flex flex-wrap items-center">
@@ -41,9 +59,17 @@ const Navbar = () => {
               </a>
             </li>
             <li className="mr-3">
+              <a
+                className="inline-block py-2 px-4 text-white no-underline"
+                href="/createPost"
+              >
+                Create Post
+              </a>
+            </li>
+            <li className="mr-3">
               <button
                 className="inline-block bg-teal-800 text-white font-bold py-2 px-4 rounded border border-transparent hover:bg-gray-800 hover:border-teal-500 transition-colors duration-300"
-                onClick={() => alert("Logout")}
+                onClick={(handelLogout)}
               >
                 Logout
               </button>

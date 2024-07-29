@@ -8,7 +8,7 @@ import AdminProtectedRoute from '../src/authProviderComponents/adminProtectedRou
 import { AuthProvider } from './authProviderComponents/authProvider';
 import Details from './details/detail';
 import CreatePost from './posts/createpost';
-
+import UserProfileCard from './userProfile/userprofile'
 
 function App() {
   return (
@@ -24,8 +24,10 @@ function App() {
         {/*  Protected Routes */}
         <Route path='/home' element={<ProtectedRoute element={Home} />} />
         <Route path='/post' element={<ProtectedRoute element={CreatePost} />} />
-
-
+        <Route path='/createPost' element={<ProtectedRoute element={CreatePost} />} />
+        <Route path='/job' element={<ProtectedRoute element={Home} />} />
+        <Route path='/profile' element={<ProtectedRoute element={UserProfileCard}/>}/>
+ 
         {/*  Admin Protected Routes */}
         <Route path='/home' element={<AdminProtectedRoute element={Home} />} />
 
